@@ -29,8 +29,6 @@ export const TypeWriter = () => {
   const [typingSpeed, setTypingSpeed] = useState(100);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-
     const handleTyping = () => {
       // Current phrase from the array
       const fullPhrase = phrases[currentIndex];
@@ -65,7 +63,7 @@ export const TypeWriter = () => {
       }
     };
 
-    timer = setTimeout(handleTyping, typingSpeed);
+    const timer = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timer);
   }, [currentPhrase, currentIndex, isDeleting, typingSpeed, phrases]);
