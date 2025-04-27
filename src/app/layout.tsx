@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Providers from "@/components/Providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,21 +38,27 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Get the locale from the server
+  const locale = await getLocale();
+
+  // Load the messages for the current locale
+  const messages = (await import(`../../messages/${locale}.json`)).default;
+
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground flex flex-col`}
       >
-        <Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <div className="flex-grow">{children}</div>
           <Footer />
-        </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

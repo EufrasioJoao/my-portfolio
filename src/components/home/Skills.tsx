@@ -9,14 +9,9 @@ import {
   Sparkles,
 } from "lucide-react";
 import React, { useRef, useState } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  MotionValue,
-  AnimatePresence,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 type Skill = {
   name: string;
@@ -139,9 +134,9 @@ const renderIcon = (colorClass: string) => {
 };
 
 // Skill categories data
-const skillCategories: SkillCategory[] = [
+const getSkillCategories = (t: any): SkillCategory[] => [
   {
-    title: "Frontend",
+    title: t("frontend"),
     icon: <Code className="h-8 w-8 text-primary" />,
     colorClass: "primary",
     gradientStyle: {
@@ -166,7 +161,7 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Backend",
+    title: t("backend"),
     icon: <Server className="h-8 w-8 text-secondary" />,
     colorClass: "secondary",
     gradientStyle: {
@@ -191,7 +186,7 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Mobile",
+    title: t("mobile"),
     icon: <Smartphone className="h-8 w-8 text-accent" />,
     colorClass: "accent",
     gradientStyle: {
@@ -216,7 +211,7 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Tools & Others",
+    title: t("tools"),
     icon: <Globe className="h-8 w-8 text-tertiary" />,
     colorClass: "tertiary",
     gradientStyle: {
@@ -341,7 +336,7 @@ function SkillCard({
               getBadgeClass(category.colorClass)
             )}
           >
-            {index + 1}/{totalCategories}
+            {totalCategories}
           </span>
         </div>
 
@@ -404,6 +399,7 @@ function SkillCard({
                       getProgressClass(category.colorClass)
                     )}
                     initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
                     transition={{
                       duration: 1,
                       ease: "easeOut",
@@ -421,6 +417,9 @@ function SkillCard({
 }
 
 export function Skills() {
+  const t = useTranslations("skills");
+  const skillCategories = getSkillCategories(t);
+
   // Reference to the horizontal scroll container
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeCard, setActiveCard] = useState(0);
@@ -483,7 +482,7 @@ export function Skills() {
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-sm font-medium text-primary mb-5 relative overflow-hidden">
               <Sparkles className="h-3.5 w-3.5 text-primary animate-pulse" />
-              <span>Skills & Technologies</span>
+              <span>{t("title")}</span>
               <span className="absolute -bottom-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></span>
             </div>
             <motion.h2
@@ -493,7 +492,7 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              My Technical Expertise
+              {t("title")}
             </motion.h2>
             <motion.p
               className="mt-4 text-foreground/80 max-w-2xl mx-auto"
@@ -502,9 +501,7 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              I specialize in the following technologies and frameworks,
-              bringing extensive experience and professional quality to every
-              project.
+              {t("subtitle")}
             </motion.p>
           </motion.div>
 

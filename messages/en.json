@@ -1,0 +1,142 @@
+{
+  "footer": {
+    "navigation": "Navigation",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "services": "Services",
+    "webDevelopment": "Web Development",
+    "mobileDevelopment": "Mobile Development",
+    "consulting": "Consulting",
+    "connect": "Connect",
+    "email": "Email",
+    "phone": "Phone",
+    "yourName": "Eufrásio João",
+    "tagline": "Fullstack developer specializing in creating high-performance and visually appealing digital experiences.",
+    "allRightsReserved": "All rights reserved.",
+    "copyright": "Eufrásio João. All rights reserved."
+  },
+  "navigation": {
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Turning Ideas Into",
+      "subtitle": "Fullstack Web & Mobile Developer focused on creating beautiful, responsive and functional applications with modern technologies.",
+      "available": "Available for Work",
+      "getInTouch": "Get in Touch",
+      "viewProjects": "View Projects",
+      "typewriter": [
+        "Modern Web Apps",
+        "Beautiful UI",
+        "Responsive Sites",
+        "Fullstack Solutions"
+      ]
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My Journey as a Developer",
+    "description": "I'm a passionate Fullstack Developer with extensive experience in building web and mobile applications that combine beautiful design with robust functionality.",
+    "experience": "With over 5 years of experience in web and mobile development, I've worked on a diverse range of projects, from e-commerce platforms to enterprise applications. My approach combines technical expertise with creative problem-solving to deliver solutions that exceed expectations.",
+    "specialization": "I specialize in creating responsive and performant applications using modern technologies like React, Next.js, and React Native on the frontend, and Node.js, Express, MySQL, and Prisma on the backend.",
+    "skill1": "Web Development",
+    "skill2": "Mobile Development",
+    "skill3": "UI/UX Design",
+    "skill4": "API Development",
+    "skill5": "Database Design",
+    "skill6": "Cloud Services",
+    "resume": "Download my resume"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "I specialize in the following technologies and frameworks, bringing extensive experience and professional quality to every project.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Mobile",
+    "tools": "Tools & Others"
+  },
+  "projects": {
+    "badge": "Featured Projects",
+    "title": "My Recent Work",
+    "subtitle": "Here are some of the projects I've worked on. Each project reflects my commitment to quality and attention to detail.",
+    "project1": {
+      "title": "ShopMaisMZ",
+      "tag1": "Next.js",
+      "tag2": "Supabase",
+      "tag3": "Tailwind CSS",
+      "description": "A comprehensive e-commerce platform serving Mozambique with 2-day delivery in Nampula. Features include product catalog, shopping cart, secure payments (MPesa and PayPal), and a 5-day return policy.",
+      "liveLink": "Live Site"
+    },
+    "project2": {
+      "title": "Fluent Academy",
+      "tag1": "Next.js",
+      "tag2": "TypeScript",
+      "tag3": "Prisma",
+      "description": "A comprehensive English learning platform featuring courses from beginner to advanced levels. Includes 120+ lessons, 20+ hours of content, interactive quizzes, podcasts, and certification. Supports various learning paths with subscription-based access.",
+      "liveLink": "Live Site"
+    },
+    "project3": {
+      "title": "LeadsAI",
+      "tag1": "React",
+      "tag2": "Node.js",
+      "tag3": "AI APIs",
+      "description": "An innovative AI-powered lead generation platform that helps businesses identify and engage with high-quality prospects. Features include persona enrichment, prospect targeting, automated outreach, and analytics for optimizing marketing strategies.",
+      "liveLink": "Live Site"
+    }
+  },
+  "experience": {
+    "badge": "Professional Journey",
+    "title": "Work Experience",
+    "subtitle": "My professional history and the companies I've collaborated with throughout my career.",
+    "job1": {
+      "title": "Fullstack Software Engineer",
+      "company": "Forge",
+      "period": "Present",
+      "description": "Responsible for creating comprehensive solutions for clients across all levels of development, from concept to deployment, including various types of applications and digital solutions.",
+      "responsibility1": "Develop end-to-end solutions tailored to diverse client requirements",
+      "responsibility2": "Implement fullstack applications using modern JavaScript frameworks",
+      "responsibility3": "Lead technical architecture decisions for client projects"
+    },
+    "job2": {
+      "title": "Fullstack Developer",
+      "company": "Bantuc",
+      "period": "Previous",
+      "description": "Specialized in creating frontend applications and websites, working on both client-facing interfaces and backend services to deliver complete digital solutions.",
+      "responsibility1": "Developed responsive web applications with modern JavaScript frameworks",
+      "responsibility2": "Built and maintained backend services to support frontend applications",
+      "responsibility3": "Collaborated with cross-functional teams to deliver high-quality products"
+    },
+    "job3": {
+      "title": "Fullstack Developer",
+      "company": "FlextTech",
+      "period": "Previous",
+      "description": "Started my professional journey as a fullstack developer, working on various web development projects and gaining expertise in both frontend and backend technologies.",
+      "responsibility1": "Created responsive web interfaces with HTML, CSS, and JavaScript",
+      "responsibility2": "Developed server-side applications and integrated with databases",
+      "responsibility3": "Participated in full software development lifecycle from concept to deployment"
+    },
+    "viewResume": "View Full Resume"
+  },
+  "cta": {
+    "title": "Let's Create Something Amazing Together",
+    "description": "I'm currently available for freelance projects and full-time opportunities. Whether you need a complete website, a custom application, or technical expertise, I'd love to hear about your vision.",
+    "getInTouch": "Get In Touch",
+    "downloadResume": "Download Resume",
+    "viewGitHub": "View GitHub",
+    "connectLinkedIn": "Connect on LinkedIn",
+    "exploreProjects": "Explore Projects"
+  },
+  "settings": {
+    "title": "Language",
+    "english": "English",
+    "portuguese": "Portuguese"
+  }
+}

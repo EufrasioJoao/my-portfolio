@@ -1,5 +1,6 @@
 import { User, CheckCircle2, Download } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 /**
  * Experience component for the home page
@@ -7,6 +8,8 @@ import Link from "next/link";
  * @returns Experience section with timeline of work history
  */
 export function Experience() {
+  const t = useTranslations("experience");
+
   return (
     <>
       {/* Experience Section */}
@@ -19,14 +22,13 @@ export function Experience() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-sm font-medium text-accent mb-4">
               <User className="h-4 w-4" />
-              <span>Professional Journey</span>
+              <span>{t("badge")}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Work Experience
+              {t("title")}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              My professional history and the companies I've collaborated with
-              throughout my career.
+              {t("subtitle")}
             </p>
           </div>
 
@@ -41,43 +43,29 @@ export function Experience() {
 
                 <div className="md:pl-12">
                   <div className="md:flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold">
-                      Fullstack Software Engineer
-                    </h3>
+                    <h3 className="text-xl font-semibold">{t("job1.title")}</h3>
                     <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary mt-1 md:mt-0">
-                      <span>Present</span>
+                      <span>{t("job1.period")}</span>
                     </div>
                   </div>
                   <div className="text-lg font-medium text-muted-foreground mb-4">
-                    Forge
+                    {t("job1.company")}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    Responsible for creating comprehensive solutions for clients
-                    across all levels of development, from concept to
-                    deployment, including various types of applications and
-                    digital solutions.
+                    {t("job1.description")}
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>
-                        Develop end-to-end solutions tailored to diverse client
-                        requirements
-                      </span>
+                      <span>{t("job1.responsibility1")}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>
-                        Implement fullstack applications using modern JavaScript
-                        frameworks
-                      </span>
+                      <span>{t("job1.responsibility2")}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>
-                        Lead technical architecture decisions for client
-                        projects
-                      </span>
+                      <span>{t("job1.responsibility3")}</span>
                     </li>
                   </ul>
                 </div>
@@ -92,42 +80,29 @@ export function Experience() {
 
                 <div className="md:pl-12">
                   <div className="md:flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold">
-                      Fullstack Developer
-                    </h3>
+                    <h3 className="text-xl font-semibold">{t("job2.title")}</h3>
                     <div className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-3 py-1 text-sm font-medium text-secondary mt-1 md:mt-0">
-                      <span>Previous</span>
+                      <span>{t("job2.period")}</span>
                     </div>
                   </div>
                   <div className="text-lg font-medium text-muted-foreground mb-4">
-                    Bantuc
+                    {t("job2.company")}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    Specialized in creating frontend applications and websites,
-                    working on both client-facing interfaces and backend
-                    services to deliver complete digital solutions.
+                    {t("job2.description")}
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>
-                        Developed responsive web applications with modern
-                        JavaScript frameworks
-                      </span>
+                      <span>{t("job2.responsibility1")}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>
-                        Built and maintained backend services to support
-                        frontend applications
-                      </span>
+                      <span>{t("job2.responsibility2")}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span>
-                        Collaborated with cross-functional teams to deliver
-                        high-quality products
-                      </span>
+                      <span>{t("job2.responsibility3")}</span>
                     </li>
                   </ul>
                 </div>
@@ -142,42 +117,29 @@ export function Experience() {
 
                 <div className="md:pl-12">
                   <div className="md:flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold">
-                      Fullstack Developer
-                    </h3>
+                    <h3 className="text-xl font-semibold">{t("job3.title")}</h3>
                     <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-sm font-medium text-accent mt-1 md:mt-0">
-                      <span>Previous</span>
+                      <span>{t("job3.period")}</span>
                     </div>
                   </div>
                   <div className="text-lg font-medium text-muted-foreground mb-4">
-                    FlextTech
+                    {t("job3.company")}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    Started my professional journey as a fullstack developer,
-                    working on various web development projects and gaining
-                    expertise in both frontend and backend technologies.
+                    {t("job3.description")}
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>
-                        Created responsive web interfaces with HTML, CSS, and
-                        JavaScript
-                      </span>
+                      <span>{t("job3.responsibility1")}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>
-                        Developed server-side applications and integrated with
-                        databases
-                      </span>
+                      <span>{t("job3.responsibility2")}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>
-                        Participated in full software development lifecycle from
-                        concept to deployment
-                      </span>
+                      <span>{t("job3.responsibility3")}</span>
                     </li>
                   </ul>
                 </div>
@@ -192,7 +154,7 @@ export function Experience() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-6 py-3 font-medium hover:bg-accent/20 transition-colors hover:text-primary"
             >
-              View Full Resume
+              {t("viewResume")}
               <Download className="h-4 w-4 ml-1" />
             </Link>
           </div>

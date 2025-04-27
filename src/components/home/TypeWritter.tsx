@@ -1,5 +1,5 @@
 "use client";
-import { useLanguage } from "@/context/LanguageContext";
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 /**
@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
  * Displays text with a typing animation and cycles through different phrases
  */
 export const TypeWriter = () => {
-  const { language } = useLanguage();
-  const phrases =
-    language === "en"
+  const locale = useLocale();
+
+  // Ensure phrases is an array with proper typing
+  const typingPhrases =
+    locale === "en"
       ? [
           "Modern Web Apps",
           "Beautiful UI",
@@ -31,7 +33,7 @@ export const TypeWriter = () => {
   useEffect(() => {
     const handleTyping = () => {
       // Current phrase from the array
-      const fullPhrase = phrases[currentIndex];
+      const fullPhrase = typingPhrases[currentIndex];
 
       // Calculate the next part of the phrase based on if we're deleting or adding
       const updatedPhrase = isDeleting
@@ -57,7 +59,7 @@ export const TypeWriter = () => {
       else if (isDeleting && updatedPhrase === "") {
         setIsDeleting(false);
         // Move to the next phrase
-        setCurrentIndex((prev) => (prev + 1) % phrases.length);
+        setCurrentIndex((prev) => (prev + 1) % typingPhrases.length);
         // Small pause before starting the next phrase
         setTypingSpeed(400);
       }
@@ -66,7 +68,7 @@ export const TypeWriter = () => {
     const timer = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [currentPhrase, currentIndex, isDeleting, typingSpeed, phrases]);
+  }, [currentPhrase, currentIndex, isDeleting, typingSpeed, typingPhrases]);
 
   return (
     <span className="relative ml-4 inline-block min-w-[280px] font-bold tracking-tight">

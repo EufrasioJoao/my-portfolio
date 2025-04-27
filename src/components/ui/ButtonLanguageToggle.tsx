@@ -1,18 +1,41 @@
 "use client";
 
-import { useLanguage } from "@/context/LanguageContext";
 import { Globe } from "lucide-react";
 
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 /**
  * Language toggle button component with cyberpunk styling
  * Allows switching between different language options
  */
 export function ButtonLanguageToggle() {
-  const { language, toggleLanguage } = useLanguage();
+  const router = useRouter();
+  const [language, setLanguage] = useState<"en" | "pt">("pt");
+  const locale = useLocale();
+
+  const switchLanguage = (newLocale: string) => {
+    if (newLocale === locale) return;
+
+    // Set cookie for the locale
+    document.cookie = `NEXT_LOCALE=${newLocale};path=/;max-age=31536000`;
+
+    // Force a refresh to apply the new locale
+    setLanguage(newLocale as "en" | "pt");
+    router.refresh();
+  };
+
+  const getLanguage = () => {
+    setLanguage(locale as "en" | "pt");
+  };
+
+  useEffect(() => {
+    getLanguage();
+  }, []);
 
   return (
     <button
-      onClick={toggleLanguage}
+      onClick={() => switchLanguage(language == "en" ? "pt" : "en")}
       className="cyber-button px-3 py-2 rounded-md text-sm font-medium relative overflow-hidden group"
       aria-label={`Change language to ${
         language === "en" ? "Portuguese" : "English"

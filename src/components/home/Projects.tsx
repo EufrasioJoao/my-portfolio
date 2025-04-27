@@ -1,16 +1,14 @@
-import { Github, Laptop, ExternalLink } from "lucide-react";
+import { Laptop, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 /**
  * Projects component showcasing featured work examples
- *
- * TODO: Replace the temporary images with actual project screenshots:
- * - /shopmaismz.webp
- * - /fluentacademy.webp
- * - /leadsai.webp
  */
 export function Projects() {
+  const t = useTranslations("projects");
+
   return (
     <>
       {/* Projects Section */}
@@ -23,14 +21,13 @@ export function Projects() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-3 py-1 text-sm font-medium text-secondary mb-4">
               <Laptop className="h-4 w-4" />
-              <span>Featured Projects</span>
+              <span>{t("badge")}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              My Recent Work
+              {t("title")}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              Here are some of the projects I've worked on. Each project
-              reflects my commitment to quality and attention to detail.
+              {t("subtitle")}
             </p>
           </div>
 
@@ -48,21 +45,20 @@ export function Projects() {
               <div className="p-6 flex-1 flex flex-col">
                 <div className="mb-4">
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary mr-2">
-                    Next.js
+                    {t("project1.tag1")}
                   </span>
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-secondary/10 text-secondary mr-2">
-                    Supabase
+                    {t("project1.tag2")}
                   </span>
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent">
-                    Tailwind CSS
+                    {t("project1.tag3")}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">ShopMaisMZ</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  {t("project1.title")}
+                </h3>
                 <p className="text-muted-foreground text-sm mb-4 flex-1">
-                  A comprehensive e-commerce platform serving Mozambique with
-                  2-day delivery in Nampula. Features include product catalog,
-                  shopping cart, secure payments (MPesa and PayPal), and a 5-day
-                  return policy.
+                  {t("project1.description")}
                 </p>
                 <div className="flex gap-3 mt-auto">
                   <Link
@@ -72,7 +68,7 @@ export function Projects() {
                     className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                   >
                     <ExternalLink className="h-4 w-4" />
-                    Live Site
+                    {t("project1.liveLink")}
                   </Link>
                 </div>
               </div>
@@ -91,22 +87,20 @@ export function Projects() {
               <div className="p-6 flex-1 flex flex-col">
                 <div className="mb-4">
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary mr-2">
-                    Next.js
+                    {t("project2.tag1")}
                   </span>
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-secondary/10 text-secondary mr-2">
-                    TypeScript
+                    {t("project2.tag2")}
                   </span>
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent">
-                    Prisma
+                    {t("project2.tag3")}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Fluent Academy</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  {t("project2.title")}
+                </h3>
                 <p className="text-muted-foreground text-sm mb-4 flex-1">
-                  A comprehensive English learning platform featuring courses
-                  from beginner to advanced levels. Includes 120+ lessons, 20+
-                  hours of content, interactive quizzes, podcasts, and
-                  certification. Supports various learning paths with
-                  subscription-based access.
+                  {t("project2.description")}
                 </p>
                 <div className="flex gap-3 mt-auto">
                   <Link
@@ -116,7 +110,7 @@ export function Projects() {
                     className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                   >
                     <ExternalLink className="h-4 w-4" />
-                    Live Site
+                    {t("project2.liveLink")}
                   </Link>
                 </div>
               </div>
@@ -135,22 +129,20 @@ export function Projects() {
               <div className="p-6 flex-1 flex flex-col">
                 <div className="mb-4">
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary mr-2">
-                    React
+                    {t("project3.tag1")}
                   </span>
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-secondary/10 text-secondary mr-2">
-                    Node.js
+                    {t("project3.tag2")}
                   </span>
                   <span className="inline-block px-2 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent">
-                    AI APIs
+                    {t("project3.tag3")}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">LeadsAI</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  {t("project3.title")}
+                </h3>
                 <p className="text-muted-foreground text-sm mb-4 flex-1">
-                  An innovative AI-powered lead generation platform that helps
-                  businesses identify and engage with high-quality prospects.
-                  Features include persona enrichment, prospect targeting,
-                  automated outreach, and analytics for optimizing marketing
-                  strategies.
+                  {t("project3.description")}
                 </p>
                 <div className="flex gap-3 mt-auto">
                   <Link
@@ -160,7 +152,7 @@ export function Projects() {
                     className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                   >
                     <ExternalLink className="h-4 w-4" />
-                    Live Site
+                    {t("project3.liveLink")}
                   </Link>
                 </div>
               </div>

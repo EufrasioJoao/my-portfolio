@@ -1,0 +1,142 @@
+{
+  "footer": {
+    "navigation": "Navegação",
+    "about": "Sobre Mim",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato",
+    "services": "Serviços",
+    "webDevelopment": "Desenvolvimento Web",
+    "mobileDevelopment": "Desenvolvimento Mobile",
+    "consulting": "Consultoria",
+    "connect": "Conecte-se",
+    "email": "Email",
+    "phone": "Telefone",
+    "yourName": "Eufrásio João",
+    "tagline": "Desenvolvedor Fullstack especializado em criar experiências digitais de alto desempenho e visualmente atraentes.",
+    "allRightsReserved": "Todos os direitos reservados.",
+    "copyright": "Eufrásio João. Todos os direitos reservados."
+  },
+  "navigation": {
+    "about": "Sobre Mim",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato",
+    "resume": "Currículo"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Transformando Ideias em",
+      "subtitle": "Desenvolvedor Web & Mobile Fullstack focado em criar aplicações bonitas, responsivas e funcionais com tecnologias modernas.",
+      "available": "Disponível para Trabalho",
+      "getInTouch": "Entre em Contato",
+      "viewProjects": "Ver Projetos",
+      "typewriter": [
+        "Apps Web Modernos",
+        "Belas Interfaces",
+        "Sites Responsivos",
+        "Soluções Fullstack"
+      ]
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Minha Jornada como Desenvolvedor",
+    "description": "Sou um desenvolvedor Fullstack apaixonado com ampla experiência na criação de aplicações web e mobile que combinam design bonito com funcionalidade robusta.",
+    "experience": "Com mais de 5 anos de experiência em desenvolvimento web e mobile, trabalhei em uma ampla gama de projetos, desde plataformas de e-commerce até aplicações empresariais. Minha abordagem combina expertise técnica com resolução criativa de problemas para entregar soluções que excedem expectativas.",
+    "specialization": "Especializo-me na criação de aplicações responsivas e de alto desempenho usando tecnologias modernas como React, Next.js e React Native no frontend, e Node.js, Express, MySQL e Prisma no backend.",
+    "skill1": "Desenvolvimento Web",
+    "skill2": "Desenvolvimento Mobile",
+    "skill3": "Design UI/UX",
+    "skill4": "Desenvolvimento de API",
+    "skill5": "Design de Banco de Dados",
+    "skill6": "Serviços em Nuvem",
+    "resume": "Baixar meu currículo"
+  },
+  "skills": {
+    "title": "Habilidades & Tecnologias",
+    "subtitle": "Especializo-me nas seguintes tecnologias e frameworks, trazendo ampla experiência e qualidade profissional para cada projeto.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Mobile",
+    "tools": "Ferramentas & Outros"
+  },
+  "projects": {
+    "badge": "Projetos em Destaque",
+    "title": "Meus Trabalhos Recentes",
+    "subtitle": "Aqui estão alguns dos projetos em que trabalhei. Cada projeto reflete meu compromisso com a qualidade e atenção aos detalhes.",
+    "project1": {
+      "title": "ShopMaisMZ",
+      "tag1": "Next.js",
+      "tag2": "Supabase",
+      "tag3": "Tailwind CSS",
+      "description": "Uma plataforma de e-commerce abrangente que atende Moçambique com entrega em 2 dias em Nampula. Os recursos incluem catálogo de produtos, carrinho de compras, pagamentos seguros (MPesa e PayPal) e política de devolução de 5 dias.",
+      "liveLink": "Site ao Vivo"
+    },
+    "project2": {
+      "title": "Fluent Academy",
+      "tag1": "Next.js",
+      "tag2": "TypeScript",
+      "tag3": "Prisma",
+      "description": "Uma plataforma abrangente de aprendizado de inglês com cursos do nível iniciante ao avançado. Inclui mais de 120 lições, mais de 20 horas de conteúdo, testes interativos, podcasts e certificação. Suporta vários caminhos de aprendizado com acesso baseado em assinatura.",
+      "liveLink": "Site ao Vivo"
+    },
+    "project3": {
+      "title": "LeadsAI",
+      "tag1": "React",
+      "tag2": "Node.js",
+      "tag3": "AI APIs",
+      "description": "Uma plataforma inovadora de geração de leads baseada em IA que ajuda empresas a identificar e interagir com leads de alta qualidade. Os recursos incluem enriquecimento de persona, segmentação de prospects, contato automatizado e análises para otimizar estratégias de marketing.",
+      "liveLink": "Site ao Vivo"
+    }
+  },
+  "experience": {
+    "badge": "Jornada Profissional",
+    "title": "Experiência de Trabalho",
+    "subtitle": "Meu histórico profissional e as empresas com as quais colaborei ao longo da minha carreira.",
+    "job1": {
+      "title": "Engenheiro de Software Fullstack",
+      "company": "Forge",
+      "period": "Atual",
+      "description": "Responsável por criar soluções abrangentes para clientes em todos os níveis de desenvolvimento, desde o conceito até a implantação, incluindo vários tipos de aplicações e soluções digitais.",
+      "responsibility1": "Desenvolver soluções completas adaptadas a diversos requisitos de clientes",
+      "responsibility2": "Implementar aplicações fullstack usando frameworks JavaScript modernos",
+      "responsibility3": "Liderar decisões de arquitetura técnica para projetos de clientes"
+    },
+    "job2": {
+      "title": "Desenvolvedor Fullstack",
+      "company": "Bantuc",
+      "period": "Anterior",
+      "description": "Especializado na criação de aplicações frontend e websites, trabalhando tanto em interfaces voltadas para o cliente quanto em serviços de backend para entregar soluções digitais completas.",
+      "responsibility1": "Desenvolvi aplicações web responsivas com frameworks JavaScript modernos",
+      "responsibility2": "Construí e mantive serviços de backend para suportar aplicações frontend",
+      "responsibility3": "Colaborei com equipes multifuncionais para entregar produtos de alta qualidade"
+    },
+    "job3": {
+      "title": "Desenvolvedor Fullstack",
+      "company": "FlextTech",
+      "period": "Anterior",
+      "description": "Iniciei minha jornada profissional como desenvolvedor fullstack, trabalhando em vários projetos de desenvolvimento web e adquirindo expertise em tecnologias frontend e backend.",
+      "responsibility1": "Criei interfaces web responsivas com HTML, CSS e JavaScript",
+      "responsibility2": "Desenvolvi aplicações do lado do servidor e integrei com bancos de dados",
+      "responsibility3": "Participei do ciclo de vida completo de desenvolvimento de software, do conceito à implantação"
+    },
+    "viewResume": "Ver Currículo Completo"
+  },
+  "cta": {
+    "title": "Vamos Criar Algo Incrível Juntos",
+    "description": "Estou atualmente disponível para projetos freelance e oportunidades em tempo integral. Seja para um site completo, uma aplicação personalizada ou expertise técnica, adoraria ouvir sobre sua visão.",
+    "getInTouch": "Entre em Contato",
+    "downloadResume": "Baixar Currículo",
+    "viewGitHub": "Ver GitHub",
+    "connectLinkedIn": "Conectar no LinkedIn",
+    "exploreProjects": "Explorar Projetos"
+  },
+  "settings": {
+    "title": "Idioma",
+    "english": "Inglês",
+    "portuguese": "Português"
+  }
+}

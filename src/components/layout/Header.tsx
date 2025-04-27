@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useLanguage } from "@/context/LanguageContext";
-import { ButtonLanguageToggle } from "@/components/ui/ButtonLanguageToggle";
+import { useTranslations } from "next-intl";
 import { Code, Menu, User, X, Github, Linkedin, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
+import { ButtonLanguageToggle } from "../ui/ButtonLanguageToggle";
 
 /**
  * Portfolio header component with navigation and utility controls
  * Featuring futuristic cyberpunk styling
  */
 export function Header() {
-  const { translate } = useLanguage();
+  const t = useTranslations("navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -58,9 +58,9 @@ export function Header() {
           </Link>
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button - now with higher z-index to stay above the menu */}
         <button
-          className="md:hidden relative p-2 rounded-md hover:bg-primary/10 text-primary cyber-button"
+          className="md:hidden relative p-2 rounded-md hover:bg-primary/10 text-primary cyber-button z-[60]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -77,35 +77,35 @@ export function Header() {
             href="/#about"
             className="px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-primary/10 hover:text-primary relative group"
           >
-            {translate("about")}
+            {t("about")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary/80 to-primary/20 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
             href="/#skills"
             className="px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-primary/10 hover:text-primary relative group"
           >
-            {translate("skills")}
+            {t("skills")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary/80 to-primary/20 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
             href="/#projects"
             className="px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-primary/10 hover:text-primary relative group"
           >
-            {translate("projects")}
+            {t("projects")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary/80 to-primary/20 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
             href="/#experience"
             className="px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-primary/10 hover:text-primary relative group"
           >
-            {translate("experience")}
+            {t("experience")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary/80 to-primary/20 group-hover:w-full transition-all duration-300"></span>
           </Link>
           <Link
-            href="/#contact"
+            href="tel:+258857250244"
             className="px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-primary/10 hover:text-primary relative group"
           >
-            {translate("contact")}
+            {t("contact")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary/80 to-primary/20 group-hover:w-full transition-all duration-300"></span>
           </Link>
         </nav>
@@ -127,51 +127,51 @@ export function Header() {
             <span className="absolute inset-0 w-full h-full border border-primary/50 rounded-md"></span>
             <span className="relative flex items-center gap-2">
               <User className="h-4 w-4" />
-              {translate("resume")}
+              {t("resume")}
             </span>
           </Link>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - now modified to not overlap the header */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 glass-bg pt-20">
-          <div className="container mx-auto px-4 py-6 flex flex-col">
+          <div className="container backdrop-blur-lg bg-background/95 dark:bg-[#0f0f13]/95 mx-auto px-4 py-6 flex flex-col border border-primary/20 rounded-md shadow-lg shadow-primary/5">
             <nav className="flex flex-col space-y-4 mb-8">
               <Link
                 href="/#about"
                 className="py-3 text-lg font-medium border-b border-primary/20 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {translate("about")}
+                {t("about")}
               </Link>
               <Link
                 href="/#skills"
                 className="py-3 text-lg font-medium border-b border-primary/20 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {translate("skills")}
+                {t("skills")}
               </Link>
               <Link
                 href="/#projects"
                 className="py-3 text-lg font-medium border-b border-primary/20 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {translate("projects")}
+                {t("projects")}
               </Link>
               <Link
                 href="/#experience"
                 className="py-3 text-lg font-medium border-b border-primary/20 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {translate("experience")}
+                {t("experience")}
               </Link>
               <Link
-                href="/#contact"
+                href="tel:+258857250244"
                 className="py-3 text-lg font-medium border-b border-primary/20 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {translate("contact")}
+                {t("contact")}
               </Link>
             </nav>
 
@@ -190,7 +190,7 @@ export function Header() {
                 <span className="absolute inset-0 w-full h-full border border-primary/50 rounded-md"></span>
                 <span className="relative flex items-center justify-center gap-2">
                   <User className="h-5 w-5" />
-                  {translate("resume")}
+                  {t("resume")}
                 </span>
               </Link>
             </div>

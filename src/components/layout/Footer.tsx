@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useLanguage } from "@/context/LanguageContext";
+import { useTranslations } from "next-intl";
 import { Github, Linkedin, Mail, Code, ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
  * Features cyberpunk-inspired design elements
  */
 export function Footer() {
-  const { translate } = useLanguage();
+  const t = useTranslations("footer");
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Handle scroll-to-top button visibility
@@ -65,9 +65,7 @@ export function Footer() {
                 <span className="ml-2 text-foreground">João</span>
               </Link>
             </div>
-            <p className="text-muted-foreground mb-4">
-              {translate("footerTagline")}
-            </p>
+            <p className="text-muted-foreground mb-4">{t("tagline")}</p>
             <div className="flex space-x-4 mt-auto">
               <a
                 href="https://github.com/EufrasioJoao"
@@ -100,7 +98,7 @@ export function Footer() {
           {/* Navigation sections */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-medium mb-4 relative inline-block">
-              <span className="text-foreground">{translate("navigation")}</span>
+              <span className="text-foreground">{t("navigation")}</span>
               <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-primary/80 to-transparent"></span>
             </h3>
             <ul className="space-y-2">
@@ -109,7 +107,7 @@ export function Footer() {
                   href="/#about"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("about")}
+                  {t("about")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
@@ -118,7 +116,7 @@ export function Footer() {
                   href="/#skills"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("skills")}
+                  {t("skills")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
@@ -127,7 +125,7 @@ export function Footer() {
                   href="/#projects"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("projects")}
+                  {t("projects")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
@@ -136,16 +134,16 @@ export function Footer() {
                   href="/#experience"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("experience")}
+                  {t("experience")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#contact"
+                  href="tel:+258857250244"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("contact")}
+                  {t("contact")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
@@ -154,7 +152,7 @@ export function Footer() {
 
           <div className="md:col-span-1">
             <h3 className="text-lg font-medium mb-4 relative inline-block">
-              <span className="text-foreground">{translate("services")}</span>
+              <span className="text-foreground">{t("services")}</span>
               <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-primary/80 to-transparent"></span>
             </h3>
             <ul className="space-y-2">
@@ -164,7 +162,7 @@ export function Footer() {
                   target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("webDevelopment")}
+                  {t("webDevelopment")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
@@ -174,7 +172,7 @@ export function Footer() {
                   target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("mobileDevelopment")}
+                  {t("mobileDevelopment")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
@@ -184,7 +182,7 @@ export function Footer() {
                   target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors relative group"
                 >
-                  {translate("consulting")}
+                  {t("consulting")}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
@@ -193,7 +191,7 @@ export function Footer() {
 
           <div className="md:col-span-1">
             <h3 className="text-lg font-medium mb-4 relative inline-block">
-              <span className="text-foreground">{translate("contact")}</span>
+              <span className="text-foreground">{t("contact")}</span>
               <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-primary/80 to-transparent"></span>
             </h3>
             <ul className="space-y-3">
@@ -238,7 +236,7 @@ export function Footer() {
         {/* Copyright section */}
         <div className="mt-12 pt-6 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} {translate("copyright")}
+            © {currentYear} {t("copyright")}
           </div>
         </div>
       </div>
