@@ -48,10 +48,14 @@ export function Experience() {
                       <span>{t("job1.period")}</span>
                     </div>
                   </div>
-                  <div className="text-lg font-medium text-muted-foreground mb-4">
+                  <a
+                    href="https://www.forge.co.mz"
+                    target="_blank"
+                    className="text-lg font-medium text-muted-foreground text-blue-600 underline"
+                  >
                     {t("job1.company")}
-                  </div>
-                  <p className="text-muted-foreground mb-4">
+                  </a>
+                  <p className="text-muted-foreground my-4">
                     {t("job1.description")}
                   </p>
                   <ul className="space-y-2">
