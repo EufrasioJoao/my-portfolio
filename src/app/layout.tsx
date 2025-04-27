@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     "Fullstack developer specializing in React, React Native, Next.js, Node.js, MySQL, Express, and Supabase. View my projects and experience.",
   icons: {
     icon: {
-      url: "/frasio.png",
-      href: "/frasio.png",
+      url: "/back.png",
+      href: "/back.png",
     },
   },
   keywords: [
