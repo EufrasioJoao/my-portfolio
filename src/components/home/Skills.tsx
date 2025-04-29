@@ -228,9 +228,6 @@ const getSkillCategories = (t: any): SkillCategory[] => [
         name: "Git / GitHub",
       },
       {
-        name: "Docker",
-      },
-      {
         name: "CI/CD",
       },
     ],
